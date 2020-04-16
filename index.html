@@ -176,6 +176,24 @@
 			}, 100);
 		}
 	</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script>
+      window['MathJax'] = {
+          tex: {
+            inlineMath: [ ['$','$']],
+            autoload: {
+                verb: ['verb'],
+                colorV2: ['color'],
+                require:['require']
+            },
+            packages: {'[+]': ['braket']}
+          },
+          loader: {load: ['[tex]/braket']},
+          svg: {
+            fontCache: 'global'
+          }
+      };
+    </script>
 </body>
 
 </html>
