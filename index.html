@@ -123,24 +123,6 @@
             color: #9c9c9c;
         }
     </style>
-	<script>
-      window['MathJax'] = {
-          tex: {
-            inlineMath: [ ['$','$']],
-            autoload: {
-                verb: ['verb'],
-                colorV2: ['color'],
-                require:['require']
-            },
-            packages: {'[+]': ['braket']}
-          },
-          loader: {load: ['[tex]/braket']},
-          svg: {
-            fontCache: 'global'
-          }
-      };
-    </script>
-	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/minivaline@latest/dist/MiniValine.min.js"></script>
 
@@ -194,6 +176,25 @@
 			}, 100);
 		}
 	</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script>
+      window['MathJax'] = {
+          tex: {
+            inlineMath: [ ['$','$']],
+            autoload: {
+                verb: ['verb'],
+				color: [],
+                colorV2: ['color'],
+                require:['require']
+            },
+            packages: {'[+]': ['braket']}
+          },
+          loader: {load: ['[tex]/braket']},
+          svg: {
+            fontCache: 'global'
+          }
+      };
+    </script>
 </body>
 
 </html>
