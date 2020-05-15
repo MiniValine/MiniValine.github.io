@@ -140,6 +140,10 @@
 			top: 6px;
 		}
 	</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/MiniValine/MiniValine@2.3.2/dist/MiniValine.min.js"></script>
+
 </head>
 
 <body>
@@ -158,10 +162,11 @@
                 <iframe allowtransparency="true" frameborder="0" scrolling="0" width="98" height="20"></iframe>
                 <iframe allowtransparency="true" frameborder="0" scrolling="0" width="156" height="20"></iframe>
             </div>
-		    <div>
+			<div>
 				<a href="./xCss.html" class="button">xCss Style Mode</a>
 				<a href="./DesertsP.html" class="button">DesertsP Style Mode</a>
 		    </div>
+            <div class="comment"></div>
         </div>
     </div>
     <div class="copy">
@@ -183,6 +188,21 @@
 			}, 100);
 		}
 	</script>
+    <script>
+		new MiniValine({
+			el: '.comment',
+			mode: 'xCss',
+			appId: 'zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz',
+			appKey: 'itmzT1JbXfAjVwMqDhGPzU45',
+			placeholder: 'Write a Comment',
+			lang: 'zh-CN',
+			pathname: 'TestPath',
+			visitor: true,
+			tagMeta: ["管理员", "小伙伴", "访客"],
+			master: ['DE8A7AA53D07E6B6BCEB45C64027763D'],
+			friends: [],
+	   });
+    </script>
 </body>
 
 </html>
