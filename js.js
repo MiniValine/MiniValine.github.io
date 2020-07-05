@@ -12,20 +12,44 @@ if(window.location.hash){
 	   }
 	}, 100);
 }
-
-var options = {
-  bottom: '64px', // default: '32px'
-  right: 'unset', // default: '32px'
-  left: '32px', // default: 'unset'
-  time: '0.5s', // default: '0.3s'
-  mixColor: '#fff', // default: '#fff'
-  backgroundColor: '#fffe',  // default: '#fff'
-  buttonColorDark: '#100f2c',  // default: '#100f2c'
-  buttonColorLight: '#fff', // default: '#fff'
-  saveInCookies: true, // default: true,
-  label: '🌓', // default: ''
-  autoMatchOsTheme: true // default: true
+function IsPC() {
+	var userAgentInfo = navigator.userAgent;
+	var Agents = ["Android", "iPhone",
+				"SymbianOS", "Windows Phone",
+				"iPad", "iPod"];
+	var flag = true;
+	for (var v = 0; v < Agents.length; v++) {
+		if (userAgentInfo.indexOf(Agents[v]) > 0) {
+			flag = false;
+			break;
+		}
+	}
+	return flag;
 };
-
-const darkmode = new Darkmode(options);
-darkmode.showWidget();
+function IsEDGE() {
+	if (navigator.userAgent.indexOf("Edg") > -1) {
+		return true;
+	}else{
+		return false;
+	}
+};
+if(IsPC()){
+	var options = {
+	  bottom: '64px', // default: '32px'
+	  right: 'unset', // default: '32px'
+	  left: '32px', // default: 'unset'
+	  time: '0.5s', // default: '0.3s'
+	  mixColor: '#fff', // default: '#fff'
+	  backgroundColor: '#fff',  // default: '#fff'
+	  buttonColorDark: '#100f2c',  // default: '#100f2c'
+	  buttonColorLight: '#fff', // default: '#fff'
+	  saveInCookies: true, // default: true,
+	  label: '🌓', // default: ''
+	  autoMatchOsTheme: true // default: true
+	};
+	if(IsEDGE()){
+		options.mixColor="black";
+	}
+	const darkmode = new Darkmode(options);
+	darkmode.showWidget();
+}
