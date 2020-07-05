@@ -154,3 +154,7 @@ a.button:active {
 .darkmode--activated pre{
 	background-color: #282c34 !important
 }
+
+.darkmode--activated .MiniValine .vlist .vcard .vcomment-body .vhead .vname {
+    color: #FFFFFF !important
+}

@@ -6,46 +6,44 @@ window.onload = function() {
 if(window.location.hash){
 	var checkExist = setInterval(function() {
 	   if (typeof jQuery == 'undefined'){return;}
-	   if ($("#"+window.location.hash.split("#")[1]).length) {
-		  $('html, body').animate({scrollTop: $("#"+window.location.hash.split("#")[1]).offset().top-90}, 1000);
+	   if ($("#"+decodeURI(window.location.hash.split("#")[1]).replace(/\ /g,"-")).length) {
+		  $('html, body').animate({scrollTop: $("#"+decodeURI(window.location.hash.split("#")[1]).replace(/\ /g,"-")).offset().top-10}, 500);
 		  clearInterval(checkExist);
 	   }
 	}, 100);
 }
-function IsPC() {
-	var userAgentInfo = navigator.userAgent;
-	var Agents = ["Android", "iPhone",
-				"SymbianOS", "Windows Phone",
-				"iPad", "iPod"];
-	var flag = true;
-	for (var v = 0; v < Agents.length; v++) {
-		if (userAgentInfo.indexOf(Agents[v]) > 0) {
-			flag = false;
-			break;
-		}
-	}
-	return flag;
-};
-function IsEDGE() {
-	if (navigator.userAgent.indexOf("Edg") > -1) {
-		return true;
-	}else{
-		return false;
-	}
+function supportCss3(style) {  
+	var prefix = ['webkit', 'Moz', 'ms', 'o'],  
+	i,  
+	humpString = [],  
+	htmlStyle = document.documentElement.style,  
+	_toHumb = function (string) {  
+	return string.replace(/-(\w)/g, function ($0, $1) {  
+	return $1.toUpperCase();  
+	});  
+	};  
+	for (i in prefix)  
+	humpString.push(_toHumb(prefix[i] + '-' + style));  
+	humpString.push(_toHumb(style));  
+	for (i in humpString)  
+	if (humpString[i] in htmlStyle) return true;  
+	return false;  
 };
 
-	var options = {
-	  bottom: '64px', // default: '32px'
-	  right: 'unset', // default: '32px'
-	  left: '32px', // default: 'unset'
-	  time: '0.5s', // default: '0.3s'
-	  mixColor: '#fff', // default: '#fff'
-	  backgroundColor: '#fff',  // default: '#fff'
-	  buttonColorDark: '#100f2c',  // default: '#100f2c'
-	  buttonColorLight: '#fff', // default: '#fff'
-	  saveInCookies: true, // default: true,
-	  label: '🌓', // default: ''
-	  autoMatchOsTheme: true // default: true
-	};
+var options = {
+  bottom: '64px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '32px', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: true, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+};
+if(supportCss3('mix-blend-mode')){
 	const darkmode = new Darkmode(options);
 	darkmode.showWidget();
+}
