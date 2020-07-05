@@ -33,7 +33,7 @@ function IsEDGE() {
 		return false;
 	}
 };
-if(IsPC()){
+
 	var options = {
 	  bottom: '64px', // default: '32px'
 	  right: 'unset', // default: '32px'
@@ -47,9 +47,5 @@ if(IsPC()){
 	  label: '🌓', // default: ''
 	  autoMatchOsTheme: true // default: true
 	};
-	if(IsEDGE()){
-		options.mixColor="black";
-	}
 	const darkmode = new Darkmode(options);
 	darkmode.showWidget();
-}
