@@ -151,3 +151,6 @@ a.button:active {
 	border: 1px solid #21252b !important
 	background: #282c34
 }
+.darkmode--activated pre{
+	background-color: #282c34 !important
+}
