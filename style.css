@@ -137,3 +137,17 @@ a.button:active {
 .darkmode--activated .MiniValine .vinputs-area .vextra-area .vsmile-icons{
 	background: transparent;
 }
+.darkmode--activated .highlight>table{
+	background: #282c34
+}
+.darkmode--activated .gutter{
+	background: #282c34 !important
+	background-color: #282c34 !important
+}
+.darkmode--activated .highlight figcaption{
+	background-color: #21252b
+}
+.darkmode--activated .highlight{
+	border: 1px solid #21252b !important
+	background: #282c34
+}
