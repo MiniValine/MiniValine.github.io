@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="./style.css">
     <title>MiniValine - A simple and minimalist comment system based on Leancloud.</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5/lib/darkmode-js.min.js"></script>
     <script src="https://unpkg.com/minivaline@latest/dist/MiniValine.min.js"></script>
 </head>
 
@@ -42,22 +43,7 @@
     <div class="copy">
         &copy; 2020 <a href="https://github.com/MiniValine/MiniValine" target="_blank">MiniValine</a>
     </div>
-    <script>
-        window.onload = function() {
-            var iframes = document.querySelectorAll('iframe');
-            iframes[0].setAttribute('src', 'https://ghbtns.com/github-btn.html?user=MiniValine&repo=MiniValine&type=watch&count=false');
-            iframes[1].setAttribute('src', 'https://ghbtns.com/github-btn.html?user=MiniValine&repo=MiniValine&type=fork&count=false');
-        }
-		if(window.location.hash){
-			var checkExist = setInterval(function() {
-			   if (typeof jQuery == 'undefined'){return;}
-			   if ($("#"+window.location.hash.split("#")[1]).length) {
-				  $('html, body').animate({scrollTop: $("#"+window.location.hash.split("#")[1]).offset().top-90}, 1000);
-				  clearInterval(checkExist);
-			   }
-			}, 100);
-		}
-	</script>
+    <script src="./js.js"></script>
     <script>
 		new MiniValine({
 			el: '.comment',
