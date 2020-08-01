@@ -143,7 +143,7 @@ a.button:active {
 .darkmode--activated .MiniValine .vlist .vcard .vcomment-body .vhead .vname {
     color: #FFFFFF !important
 }
-.darkmode--activated .MiniValine {
+.darkmode--activated .MiniValine *{
         color: #CCCCCC !important;
 }
 .darkmode--activated .MiniValine .vinputs-area .auth-section .input-wrapper input {
