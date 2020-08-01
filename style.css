@@ -145,10 +145,10 @@ a.button:active {
 }
 .darkmode--activated .MiniValine {
         color: #CCCCCC !important;
-      }
+}
 .darkmode--activated .MiniValine .vinputs-area .auth-section .input-wrapper input {
         color: #5A6268 !important;
-      }
-      .info .col .count {
-        color: #28A745;
-      }
+}
+.darkmode--activated .MiniValine .info .col .count {
+        color: #28A745 !important
+}
