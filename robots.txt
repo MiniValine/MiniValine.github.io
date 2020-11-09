@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /docs/
+
+Sitemap: https://minivaline.js.org/sitemap.txt
