@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="MiniValine,极简风,评论系统,极简风评论系统,comment system">
+    <meta name="description" content="MiniValine - 一款基于Leancloud的极简风评论系统">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,Chrome=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./assets/style.css">
+    <title>MiniValine - A simple and minimalist comment system based on Leancloud.</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5/lib/darkmode-js.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/minivaline@5.0.0-alpha.1/dist/MiniValine.min.js'></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="./" class="logo">MiniValine</a>
+            <span class="sub">A simple and minimalist comment system based on Leancloud.</span>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div id="github">
+			    <img style="margin:0 0;display:inline;cursor:pointer;margin-right: 30px;" onclick="window.open(&quot;https://github.com/MiniValine/AWESOME-MiniValine&quot;,&quot;_blank&quot;)" src="./assets/awesome.svg">
+                <iframe allowtransparency="true" frameborder="0" scrolling="0" width="98" height="20"></iframe>
+            </div>
+            <div class="comment"></div>
+        </div>
+    </div>
+    <div class="copy">
+        &copy; 2020 <a href="https://github.com/MiniValine/MiniValine" target="_blank">MiniValine</a>
+		<span id="TestPath" class="leancloud_visitors" data-flag-title="Your Article Title">
+          <em class="post-meta-item-text">阅读量 </em>
+          <i class="leancloud-visitors-count">1000000</i>
+      </span>
+	</div>
+    <script src="./assets/js.js"></script>
+    <script>
+		new MiniValine({
+			el: '.comment',
+			mode: 'xCss',
+			placeholder: 'Write a Comment',
+			lang: 'en',
+			visitor: true,
+			closeFlag: true,
+			backend: 'waline',
+			serverURLs: 'https://waline.vercel.app',
+			pathname: '/',
+	   });
+    </script>
+</body>
+
+</html>
