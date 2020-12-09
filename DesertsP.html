@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="MiniValine,极简风,评论系统,极简风评论系统,comment system">
-    <meta name="description" content="MiniValine - 一款基于Leancloud的极简风评论系统">
+    <meta name="description" content="MiniValine - 一款极简风评论系统">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,7 +13,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="./assets/style.css">
-    <title>MiniValine - A simple and minimalist comment system based on Leancloud.</title>
+    <title>MiniValine - A simple and minimalist comment system.</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5/lib/darkmode-js.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/minivaline@latest/dist/MiniValine.min.js'></script>
@@ -23,7 +23,7 @@
     <header>
         <div class="container">
             <a href="./" class="logo">MiniValine</a>
-            <span class="sub">A simple and minimalist comment system based on Leancloud.</span>
+            <span class="sub">A simple and minimalist comment system.</span>
         </div>
     </header>
     <div class="container">
@@ -50,8 +50,11 @@
 			appKey: 'NQ91iwhxPcrPoAmSu4wpEJ8g',
 			placeholder: 'Write a Comment',
 			visitor: true,
-			closeFlag: true,
 			lang: 'en',
+            RecordIP: true,
+            md: true,
+            math: true,
+            enableUA: true,
 	   });
     </script>
 </body>
